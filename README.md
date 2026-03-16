@@ -120,4 +120,4 @@ El proyecto sigue la metodologia **Sandbox / Staging**:
 
 ## Contexto
 
-Caso practico de Machine Learning para el grado en Ingeniería Matemática en la UAX,2026
+Caso practico de Machine Learning para el grado en Ingeniería Matemática en la UAX, marzo 2026
