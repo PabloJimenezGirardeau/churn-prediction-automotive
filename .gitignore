@@ -13,7 +13,6 @@ build/
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb
 
 # LaTeX
 *.aux
