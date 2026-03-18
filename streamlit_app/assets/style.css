@@ -1,0 +1,398 @@
+/* ===================================================
+   CHURN PREDICTOR — Premium Dark Theme
+   =================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+}
+
+/* Hide default elements */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-thumb { background: #2c3e50; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3498db; }
+
+/* ===== MAIN BACKGROUND ===== */
+.stApp {
+    background: linear-gradient(160deg, #060b14 0%, #0a0f1e 40%, #0d1117 100%);
+}
+
+/* ===== MAIN CONTENT PADDING ===== */
+.block-container {
+    padding-top: 1.5rem !important;
+    padding-bottom: 3rem !important;
+    max-width: 1400px !important;
+}
+
+/* ===== KPI METRIC CARDS ===== */
+div[data-testid="stMetric"] {
+    background: linear-gradient(135deg, #111827 0%, #0f1923 100%);
+    border: 1px solid rgba(52, 152, 219, 0.18);
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+div[data-testid="stMetric"]::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    opacity: 0.7;
+}
+div[data-testid="stMetric"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(52, 152, 219, 0.2);
+    border-color: rgba(52, 152, 219, 0.35);
+}
+div[data-testid="stMetric"] label {
+    font-size: 0.72rem !important;
+    color: #6c8091 !important;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 600 !important;
+}
+div[data-testid="stMetricValue"] > div {
+    font-size: 1.9rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    letter-spacing: -0.5px;
+}
+div[data-testid="stMetricDelta"] {
+    font-size: 0.8rem !important;
+}
+
+/* ===== TABS ===== */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 3px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    border-radius: 14px;
+    padding: 5px;
+    backdrop-filter: blur(10px);
+}
+.stTabs [data-baseweb="tab"] {
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 10px;
+    color: #6c8091;
+    background: transparent;
+    transition: all 0.25s ease;
+    border: none !important;
+}
+.stTabs [data-baseweb="tab"]:hover {
+    color: #c0d0e0;
+    background: rgba(52, 152, 219, 0.08);
+}
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, #1a4a7a 0%, #1e6091 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 14px rgba(52, 152, 219, 0.35), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(52, 152, 219, 0.4) !important;
+}
+.stTabs [data-baseweb="tab-border"],
+.stTabs [data-baseweb="tab-highlight"] {
+    display: none;
+}
+
+/* ===== SIDEBAR ===== */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #070c14 0%, #0a0f1a 60%, #080d16 100%);
+    border-right: 1px solid rgba(52, 152, 219, 0.1);
+    box-shadow: 6px 0 30px rgba(0, 0, 0, 0.5);
+}
+section[data-testid="stSidebar"] .stMarkdown h3 {
+    color: #3498db !important;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 1.5rem;
+    font-weight: 700;
+}
+section[data-testid="stSidebar"] label {
+    font-size: 0.8rem !important;
+    color: #7a8fa0 !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.3px;
+}
+section[data-testid="stSidebar"] [data-baseweb="tag"] {
+    background: linear-gradient(135deg, #1a3a5c, #1e4d7a) !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+}
+section[data-testid="stSidebar"] [data-baseweb="select"] > div {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(52, 152, 219, 0.15) !important;
+    border-radius: 10px !important;
+    transition: border-color 0.2s ease;
+}
+section[data-testid="stSidebar"] [data-baseweb="select"] > div:focus-within {
+    border-color: rgba(52, 152, 219, 0.45) !important;
+}
+section[data-testid="stSidebar"] .stSlider [data-baseweb="slider"] [data-testid="stTickBar"] ~ div {
+    background: rgba(52, 152, 219, 0.12);
+}
+section[data-testid="stSidebar"] .stSlider [data-baseweb="slider"] div[role="slider"] {
+    background: #3498db !important;
+    border: 2px solid #5dade2 !important;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+section[data-testid="stSidebar"] .stSlider [data-testid="stThumbValue"] {
+    color: #e0e0e0 !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+}
+
+/* ===== EXPANDERS ===== */
+.streamlit-expanderHeader {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #5dade2 !important;
+    background: rgba(52, 152, 219, 0.04) !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(52, 152, 219, 0.1) !important;
+    transition: all 0.2s ease;
+}
+.streamlit-expanderHeader:hover {
+    background: rgba(52, 152, 219, 0.08) !important;
+    border-color: rgba(52, 152, 219, 0.25) !important;
+}
+.streamlit-expanderContent {
+    border: 1px solid rgba(52, 152, 219, 0.08) !important;
+    border-top: none !important;
+    border-radius: 0 0 10px 10px !important;
+}
+
+/* ===== DATAFRAMES ===== */
+.stDataFrame {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(52, 152, 219, 0.12) !important;
+}
+.stDataFrame thead tr th {
+    background: rgba(52, 152, 219, 0.12) !important;
+    color: #a0b4c8 !important;
+    font-size: 0.78rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 600 !important;
+    border-bottom: 1px solid rgba(52, 152, 219, 0.2) !important;
+}
+.stDataFrame tbody tr:hover td {
+    background: rgba(52, 152, 219, 0.06) !important;
+}
+
+/* ===== BUTTONS ===== */
+.stButton > button {
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+    transition: all 0.25s ease !important;
+    border: 1px solid rgba(52, 152, 219, 0.3) !important;
+}
+.stButton > button[kind="primary"],
+button[data-testid="baseButton-primary"] {
+    background: linear-gradient(135deg, #1a5276 0%, #2471a3 100%) !important;
+    border: 1px solid rgba(52, 152, 219, 0.5) !important;
+    color: white !important;
+    box-shadow: 0 4px 14px rgba(52, 152, 219, 0.25) !important;
+}
+.stButton > button[kind="primary"]:hover,
+button[data-testid="baseButton-primary"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4) !important;
+    border-color: rgba(52, 152, 219, 0.7) !important;
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.stDownloadButton > button {
+    background: linear-gradient(135deg, #1a6b3a 0%, #27ae60 100%) !important;
+    border: 1px solid rgba(39, 174, 96, 0.4) !important;
+    border-radius: 10px !important;
+    color: white !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 14px rgba(39, 174, 96, 0.25) !important;
+    transition: all 0.25s ease !important;
+}
+.stDownloadButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4) !important;
+}
+
+/* ===== CARDS (custom) ===== */
+.card {
+    background: linear-gradient(135deg, #111827 0%, #0f1923 100%);
+    border: 1px solid rgba(52, 152, 219, 0.12);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+/* ===== HERO BANNER ===== */
+.hero-banner {
+    background: linear-gradient(135deg, #060d1a 0%, #0a1628 40%, #0f1f35 100%);
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    padding: 1.8rem 2.5rem;
+    border-radius: 18px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.04);
+    position: relative;
+    overflow: hidden;
+}
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db 0%, #2ecc71 50%, #9b59b6 100%);
+}
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(52,152,219,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.hero-banner h1 {
+    color: white !important;
+    font-size: 1.9rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 0.4rem !important;
+    background: linear-gradient(135deg, #ffffff 0%, #a8d4f5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+.hero-banner p {
+    color: #6c8091;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ===== PROGRESS BAR ===== */
+.stProgress > div > div > div {
+    background: linear-gradient(90deg, #1a5276, #3498db, #2ecc71);
+    border-radius: 4px;
+}
+.stProgress > div > div {
+    background: rgba(52, 152, 219, 0.1) !important;
+    border-radius: 4px;
+}
+
+/* ===== SLIDER (main content) ===== */
+.stSlider [data-baseweb="slider"] div[role="slider"] {
+    background: #3498db;
+    border: 2px solid #5dade2;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+}
+
+/* ===== FILE UPLOADER ===== */
+[data-testid="stFileUploader"] {
+    border: 2px dashed rgba(52, 152, 219, 0.25) !important;
+    border-radius: 16px !important;
+    padding: 1.5rem !important;
+    background: rgba(52, 152, 219, 0.03) !important;
+    transition: all 0.3s ease !important;
+}
+[data-testid="stFileUploader"]:hover {
+    border-color: rgba(52, 152, 219, 0.5) !important;
+    background: rgba(52, 152, 219, 0.06) !important;
+}
+
+/* ===== ALERTS ===== */
+.stAlert {
+    border-radius: 12px !important;
+    border-left-width: 4px !important;
+}
+
+/* ===== DIVIDER ===== */
+hr {
+    border: none !important;
+    border-top: 1px solid rgba(52, 152, 219, 0.08) !important;
+    margin: 1.5rem 0 !important;
+}
+
+/* ===== SELECT / NUMBER INPUT ===== */
+[data-baseweb="select"] > div,
+[data-baseweb="input"] > div {
+    background: rgba(255,255,255,0.03) !important;
+    border: 1px solid rgba(52, 152, 219, 0.15) !important;
+    border-radius: 10px !important;
+    transition: border-color 0.2s ease;
+}
+[data-baseweb="select"] > div:focus-within,
+[data-baseweb="input"] > div:focus-within {
+    border-color: rgba(52, 152, 219, 0.5) !important;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1) !important;
+}
+
+/* ===== TOGGLE / CHECKBOX ===== */
+[data-testid="stCheckbox"] label,
+[data-testid="stToggle"] label {
+    color: #a0b4c8 !important;
+    font-size: 0.85rem !important;
+}
+
+/* ===== SECTION HEADERS (markdown h3/h4) ===== */
+.stMarkdown h3 {
+    color: #c8daea !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(52, 152, 219, 0.15);
+    margin-bottom: 1rem !important;
+}
+.stMarkdown h4 {
+    color: #a0b8cc !important;
+    font-size: 0.92rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* ===== PLOTLY CHARTS CONTAINER ===== */
+[data-testid="stPlotlyChart"] {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(52, 152, 219, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.2s ease;
+}
+[data-testid="stPlotlyChart"]:hover {
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== NUMBER INPUT ===== */
+input[type="number"], input[type="text"] {
+    background: rgba(255,255,255,0.03) !important;
+    border: 1px solid rgba(52, 152, 219, 0.15) !important;
+    border-radius: 8px !important;
+    color: #e0e0e0 !important;
+}
+
+/* ===== COLUMN GAPS ===== */
+[data-testid="column"] {
+    gap: 1rem;
+}
+
+/* ===== SIDEBAR SEPARATOR ===== */
+section[data-testid="stSidebar"] hr {
+    border-top: 1px solid rgba(52, 152, 219, 0.1) !important;
+    margin: 0.8rem 0 !important;
+}
