@@ -150,4 +150,4 @@ streamlit run streamlit_app/app.py
 
 ## Context
 
-Academic project — Machine Learning course, Universidad Alfonso X el Sabio (UAX), 2026.
+Academic project — Artificial-Intelligence course, Universidad Alfonso X el Sabio (UAX), 2026.
